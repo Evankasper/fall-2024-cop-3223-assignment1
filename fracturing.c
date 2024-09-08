@@ -55,7 +55,7 @@ double doActualWork()
 
     //calculate distance between points
     double distance;
-    distance = abs(sqrt(pow(x2-x1, 2)+pow(y2-y1, 2)))
+    distance = abs(sqrt((x2-x1)*(x2-x1)) + (y2-y1)*(y2-y1));
 
     return distance;
 
@@ -80,7 +80,7 @@ double calculatePerimeter()
 double calculateArea()
 {
     double distance = doActualWork();
-    printf("The area of the city encompased by your request is %f\n", pow(distance/2, 2) * PI);
+    printf("The area of the city encompased by your request is %f\n", (distance/2)*(distance/2) * PI);
 
     return 2.0;
 }
